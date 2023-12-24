@@ -4,12 +4,8 @@ task:
 
     container:
         image: ghcr.io/sushrut1101/docker:arch
-        cpu: 24
-        memory: 64G
-        volumes:
-          - /home/cirrus/roms:/home/cirrus/voltageos
-          - /home/cirrus/ccache:/home/cirrus/ccache
-          - /home/cirrus/.config:/home/cirrus/.config
+        cpu: 8
+        memory: 32G
 
     env:
         GH_TOKEN: ENCRYPTED[915f3caa16328343227e415f7c78e85098992b465c226fd933d507cd8c4b704a608f7b57ef2e7ddcee58516fd3bc09b2]
@@ -20,4 +16,4 @@ task:
 
     Build_script: bash build.sh
 
-    Upload_script: bash upload.sh
+    #Upload_script: bash upload.sh
