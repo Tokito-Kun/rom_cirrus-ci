@@ -20,6 +20,4 @@ task:
 
     Build_script: bash build.sh
 
-    Upload_script:
-         - bash "$OUT_FILE" upload.sh
-         - gh release create "v-$BUILD_TIME" "$OUT_FILE" --generate-notes
+    Upload_script: bash upload.sh
